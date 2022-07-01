@@ -6,7 +6,7 @@
 /*   By: gbierny <gbierny@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/28 18:39:14 by gbierny           #+#    #+#             */
-/*   Updated: 2022/04/30 21:45:13 by gbierny          ###   ########.fr       */
+/*   Updated: 2022/07/01 20:24:13 by gbierny          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -71,14 +71,10 @@ int	sec_and_parsing(t_variables *v_push_swap, char **argv)
 	size_t	i;
 
 	i = 0;
-	// if (argc < 2)
-	// 	return (error_message("error: aucun argument", v_push_swap));
 	v_push_swap->whole_arg = strjoin_sep(argv, " ");
 	v_push_swap->arg = ft_split(v_push_swap->whole_arg, ' ');
 	if (!(v_push_swap->arg))
 		return (0);
-	// if (!(v_push_swap->arg)[1])
-	// 	return (error_message("error: que un argument", v_push_swap));
 	if (!check_arguments(v_push_swap->arg, v_push_swap))
 		return (0);
 	return (1);
@@ -90,7 +86,7 @@ void	push_swap(int argc, char **argv)
 	t_wep		stru;
 	t_ind_num	tmp;
 	t_ind_num	final;
-	
+
 	(void)argc;
 	v_push_swap = initialize_t_variables();
 	tmp = initialyze_ind_num();

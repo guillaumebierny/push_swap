@@ -6,7 +6,7 @@
 /*   By: gbierny <gbierny@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/07 21:54:40 by gbierny           #+#    #+#             */
-/*   Updated: 2022/04/30 21:48:48 by gbierny          ###   ########.fr       */
+/*   Updated: 2022/07/01 20:24:52 by gbierny          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -91,11 +91,6 @@ int	check_arguments(char **arg, t_variables *v_push_swap)
 	int	i;
 
 	i = -1;
-	// if (tab_len(arg) > 500)
-	// {
-	// 	error_message("there's too much arguments", v_push_swap);
-	// 	return (0);
-	// }
 	if (!only_digits(arg, v_push_swap))
 		return (0);
 	if (!check_double(arg, v_push_swap))
